@@ -7,19 +7,19 @@ import string
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(150), unique=True, nullable=False)
-    password = db.Column(db.String(150), nullable=False)
-    role = db.Column(db.String(10), default='user')
+    username = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    role = db.Column(db.String(20), default='user')
     is_super_admin = db.Column(db.Boolean, default=False)  # Cannot be demoted
-    name = db.Column(db.String(150), nullable=True)
+    name = db.Column(db.String(255), nullable=True)
     bio = db.Column(db.Text, nullable=True)
-    email = db.Column(db.String(150), unique=True, nullable=True)
-    profile_image = db.Column(db.String(200), nullable=True)  # For uploaded image URLs
+    email = db.Column(db.String(255), unique=True, nullable=True)
+    profile_image = db.Column(db.String(255), nullable=True)  # For uploaded image URLs
     date_of_birth = db.Column(db.Date, nullable=True)  # New: Date of birth
-    gender = db.Column(db.String(20), nullable=True)  # New: Gender field
+    gender = db.Column(db.String(50), nullable=True)  # New: Gender field
     is_confirmed = db.Column(db.Boolean, default=False)
-    location = db.Column(db.String(100), nullable=True)
-    website = db.Column(db.String(200), nullable=True)
+    location = db.Column(db.String(255), nullable=True)
+    website = db.Column(db.String(255), nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def can_be_deleted(self):

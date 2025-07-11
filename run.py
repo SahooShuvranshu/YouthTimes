@@ -60,10 +60,12 @@ if os.getenv('FLASK_ENV', 'local') != 'production':
 if __name__ == '__main__':
     # Setup admin and start application
     setup_super_admin()
-    
+
     print("\n🚀 Starting Youth Times Project...")
-    print("📍 Access your application at: http://127.0.0.1:5000")
-    print("🔧 Admin Panel: http://127.0.0.1:5000/admin")
+    print("📍 Access your application at: http://0.0.0.0:$PORT")
+    print("🔧 Admin Panel: http://0.0.0.0:$PORT/admin")
     print("-"*60)
-    
-    app.run(debug=True)
+
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
