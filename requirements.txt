@@ -12,8 +12,9 @@ beautifulsoup4==4.13.4
 soupsieve==2.5
 requests==2.32.4
 SQLAlchemy==2.0.41
+# Pillow 10.x is not compatible with Python 3.13 on Render. Downgraded to 9.5.0.
 cloudinary==1.36.0
-pillow==10.1.0
+pillow==9.5.0
 # Pyrebase4 removed due to Python 3.13 incompatibility
 python-dateutil==2.9.0.post0
 redis==5.0.4
