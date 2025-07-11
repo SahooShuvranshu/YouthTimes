@@ -56,9 +56,6 @@ Pygments==2.19.2
 pyparsing==3.2.3
 pypiwin32==223
 Pyrebase4==4.8.0
-python-dateutil==2.9.0.post0
-python-jwt==4.1.0
-pywin32==310
 pyzmq==27.0.0
 redis==6.2.0
 requests==2.32.4
