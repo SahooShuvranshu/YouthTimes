@@ -14,12 +14,10 @@ requests==2.32.4
 SQLAlchemy==2.0.41
 cloudinary==1.36.0
 pillow>=10.3.0
-# Pyrebase4 removed due to Python 3.13 incompatibility
 python-dateutil==2.9.0.post0
 redis==5.0.4
 bleach==6.2.0
 gunicorn==21.2.0
-# psycopg2-binary removed due to build issues on Python 3.13; use psycopg2 if needed
 python-jwt==4.1.0
 markdown==3.7
 psycopg2
